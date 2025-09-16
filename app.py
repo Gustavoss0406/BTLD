@@ -3108,4 +3108,4 @@ if __name__ == '__main__':
     print("✅ Dados reais (Binance) 1m | MTF + ML robusto por mercado")
     print(f"🧠 scikit-learn disponível: {SKLEARN_AVAILABLE}")
     print("🌐 API: http://localhost:5000")
-    app.run(host='0.0.0.0', port=3030, debug=False)
+    app.run(host='0.0.0.0', port=8080, debug=False)
