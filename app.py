@@ -389,7 +389,7 @@ class OptimizedDataCollector:
     def get_historical_dataframe(self):
         if not self.historical_data:
             return pd.DataFrame()
-        df = pd.DataFrame(self.historical_data)
+        df = pd.DataFrame([d for d in self.historical_data if isinstance(d, dict)])
         df['timestamp'] = pd.to_datetime(df['timestamp'])
         df = df.set_index('timestamp').sort_index()
         return df[['open', 'high', 'low', 'close', 'volume']].astype(float)
