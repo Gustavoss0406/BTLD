@@ -663,7 +663,7 @@ class MultiTimeframeFeatureBuilder:
     def resample_ohlc(self, df, minutes):
         if df is None or df.empty:
             return pd.DataFrame()
-        rule = f'{minutes}T'
+        rule = f'{minutes}min'
         ohlc = df[['open', 'high', 'low', 'close']].resample(rule).agg({
             'open': 'first', 'high': 'max', 'low': 'min', 'close': 'last'
         })
