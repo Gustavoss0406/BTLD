@@ -15,4 +15,4 @@ RUN pip install -r requirements.txt
 EXPOSE 8080
 
 # Comando para rodar o Flask (ajuste se seu arquivo principal não for main.py)
-CMD ["python", "main.py"]
+CMD ["python", "app.py"]
